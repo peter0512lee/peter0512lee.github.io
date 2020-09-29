@@ -1,10 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-28T15:07:44+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">彼得 JYL.</title><subtitle>JYL</subtitle><author><name>true</name></author><entry><title type="html">SwiftUI Day29</title><link href="http://localhost:4000/2020/09/28/SwiftUI-Day29.html" rel="alternate" type="text/html" title="SwiftUI Day29" /><published>2020-09-28T14:32:21+08:00</published><updated>2020-09-28T14:32:21+08:00</updated><id>http://localhost:4000/2020/09/28/SwiftUI%20Day29</id><content type="html" xml:base="http://localhost:4000/2020/09/28/SwiftUI-Day29.html">&lt;p&gt;從七月開始陸陸續續有在學習SwiftUI，原本是使用CS193p來做學習，結果太難了XD，所以現在使用https://www.hackingwithswift.com/100/swiftui這個網站學習。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-29T21:34:11+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">彼得 JYL.</title><subtitle>JYL</subtitle><author><name>true</name></author><entry><title type="html">SwiftUI Day30</title><link href="http://localhost:4000/2020/09/29/SwiftUI-Day30.html" rel="alternate" type="text/html" title="SwiftUI Day30" /><published>2020-09-29T14:36:21+08:00</published><updated>2020-09-29T14:36:21+08:00</updated><id>http://localhost:4000/2020/09/29/SwiftUI%20Day30</id><content type="html" xml:base="http://localhost:4000/2020/09/29/SwiftUI-Day30.html">&lt;h1 id=&quot;adding-to-a-list-of-words&quot;&gt;Adding to a list of words&lt;/h1&gt;
+
+&lt;h2 id=&quot;guard&quot;&gt;guard&lt;/h2&gt;
+
+&lt;p&gt;有點像if else，guard後面接條件，條件不成立跑else裡面，成立跑外面&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addNewWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newWord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lowercased&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;trimmingCharacters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;whitespacesAndNewlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;usedWords&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;newWord&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;oncommit&quot;&gt;onCommit&lt;/h2&gt;
+
+&lt;p&gt;觸發事件，在這我輸入一個單字後call addNewWord() 加入list&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;TextField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter your word&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;onCommit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addNewWord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;當在文字框輸入單字時預設第一個字會自動大寫，透過autocapitalization把自動大寫關掉&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;autocapitalization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;running-code-when-our-app-launches&quot;&gt;Running code when our app launches&lt;/h1&gt;
+
+&lt;h2 id=&quot;fatalerror&quot;&gt;fatalError&lt;/h2&gt;
+
+&lt;p&gt;強制讓App自殺&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;fatalError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Could not load start.txt from bundle.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>true</name></author><category term="Swift" /><category term="SwiftUI" /><category term="iOS" /><category term="App" /><summary type="html">Adding to a list of words</summary></entry><entry><title type="html">SwiftUI Day29</title><link href="http://localhost:4000/2020/09/28/SwiftUI-Day29.html" rel="alternate" type="text/html" title="SwiftUI Day29" /><published>2020-09-28T14:32:21+08:00</published><updated>2020-09-28T14:32:21+08:00</updated><id>http://localhost:4000/2020/09/28/SwiftUI%20Day29</id><content type="html" xml:base="http://localhost:4000/2020/09/28/SwiftUI-Day29.html">&lt;p&gt;從七月開始陸陸續續有在學習SwiftUI，原本是使用CS193p來做學習，結果太難了XD，所以現在使用https://www.hackingwithswift.com/100/swiftui這個網站學習。&lt;/p&gt;
 
 &lt;p&gt;打這篇文章主要是想記錄每天學習的東西，順便督促自己學習，因為之前的天數都沒記錄下來，結果學了就忘了D:&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;list&quot;&gt;List&lt;/h2&gt;
+&lt;h1 id=&quot;list&quot;&gt;List&lt;/h1&gt;
 
 &lt;p&gt;可以使用List{}創建一個清單空間&lt;/p&gt;
 
@@ -36,7 +71,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;loading-resources-from-your-app-bundle&quot;&gt;Loading resources from your app bundle&lt;/h2&gt;
+&lt;h1 id=&quot;loading-resources-from-your-app-bundle&quot;&gt;Loading resources from your app bundle&lt;/h1&gt;
 
 &lt;p&gt;利用Bundle.main獲取，可以指定檔案名稱（forResource）及副檔名（txt）&lt;/p&gt;
 
@@ -52,7 +87,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;working-with-strings&quot;&gt;Working with strings&lt;/h2&gt;
+&lt;h1 id=&quot;working-with-strings&quot;&gt;Working with strings&lt;/h1&gt;
 
 &lt;p&gt;如果我們想要把字串中的空格去掉並分別存進陣列，我們可以這樣做&lt;/p&gt;
 

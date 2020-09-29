@@ -26,7 +26,7 @@
 <link href="/assets/JYL.jpg" rel="apple-touch-icon-precomposed" />
 <!-- Android Lolipop Theme Color -->
 <!-- <meta name="theme-color" content="#1464FB"> -->
-<title>SwiftUI Day29</title>
+<title>SwiftUI Day30</title>
 <!-- 百度统计 -->
 
 <!-- 谷歌分析 -->
@@ -96,7 +96,7 @@
 <!-- 引入博文顶部样式 -->
 <!-- 版本一 垃圾 -->
 <!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
-    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day29</span>
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day30</span>
     <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
     <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
     <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
@@ -108,30 +108,30 @@
   <!-- 页面宽度大于800px -->
   <div class="left-area">
     
-      <a href="/2020/09/29/SwiftUI-Day30.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
-      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day30</sapn></span></div>
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">没有上一页咯</sapn></span></div>
     
   </div>
   <div class="post-titlearea">
-    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day29</span>
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day30</span>
     <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
     <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
     <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
   </div>
   <div class="right-area">
     
-      <a href="/2020/06/25/HelloWorld.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
-      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">HelloWorld!</sapn></span></div>
+      <a href="/2020/09/28/SwiftUI-Day29.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day29</sapn></span></div>
     
   </div>
 
   <!-- 页面宽度小于800px -->
   <div class="post-changearea">
     
-      <a href="/2020/09/29/SwiftUI-Day30.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>SwiftUI Day30</span></a>
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span><br>没有上一篇咯</span></a>
     
     
-      <a href="/2020/06/25/HelloWorld.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>HelloWorld!</span></a>
+      <a href="/2020/09/28/SwiftUI-Day29.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>SwiftUI Day29</span></a>
     
   </div>
 </div>
@@ -148,79 +148,43 @@
   
 
   <!-- 文章内容 -->
-  <p>從七月開始陸陸續續有在學習SwiftUI，原本是使用CS193p來做學習，結果太難了XD，所以現在使用https://www.hackingwithswift.com/100/swiftui這個網站學習。</p>
+  <h1 id="adding-to-a-list-of-words">Adding to a list of words</h1>
 
-<p>打這篇文章主要是想記錄每天學習的東西，順便督促自己學習，因為之前的天數都沒記錄下來，結果學了就忘了D:</p>
+<h2 id="guard">guard</h2>
 
-<h1 id="list">List</h1>
+<p>有點像if else，guard後面接條件，條件不成立跑else裡面，成立跑外面</p>
 
-<p>可以使用List{}創建一個清單空間</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNewWord</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">answer</span> <span class="o">=</span> <span class="n">newWord</span><span class="o">.</span><span class="nf">lowercased</span><span class="p">()</span><span class="o">.</span><span class="nf">trimmingCharacters</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">.</span><span class="n">whitespacesAndNewlines</span><span class="p">)</span>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">List</span> <span class="p">{</span>
-    <span class="kt">ForEach</span><span class="p">(</span><span class="mi">0</span><span class="o">..&lt;</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">Text</span><span class="p">(</span><span class="s">"Dynamic row </span><span class="se">\(</span><span class="nv">$0</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">guard</span> <span class="n">answer</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span>
     <span class="p">}</span>
+
+    <span class="n">usedWords</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">newWord</span> <span class="o">=</span> <span class="s">""</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>在List中我們也可加入Section來表示某個區塊的清單代表哪類</p>
+<h2 id="oncommit">onCommit</h2>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">List</span> <span class="p">{</span>
-    <span class="kt">Section</span><span class="p">(</span><span class="nv">header</span><span class="p">:</span> <span class="kt">Text</span><span class="p">(</span><span class="s">"Section 1"</span><span class="p">))</span> <span class="p">{</span>
-        <span class="kt">Text</span><span class="p">(</span><span class="s">"Static row 1"</span><span class="p">)</span>
-        <span class="kt">Text</span><span class="p">(</span><span class="s">"Static row 2"</span><span class="p">)</span>
-    <span class="p">}</span>
+<p>觸發事件，在這我輸入一個單字後call addNewWord() 加入list</p>
 
-    <span class="kt">Section</span><span class="p">(</span><span class="nv">header</span><span class="p">:</span> <span class="kt">Text</span><span class="p">(</span><span class="s">"Section 2"</span><span class="p">))</span> <span class="p">{</span>
-        <span class="kt">ForEach</span><span class="p">(</span><span class="mi">0</span><span class="o">..&lt;</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">Text</span><span class="p">(</span><span class="s">"Dynamic row </span><span class="se">\(</span><span class="nv">$0</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="kt">Section</span><span class="p">(</span><span class="nv">header</span><span class="p">:</span> <span class="kt">Text</span><span class="p">(</span><span class="s">"Section 3"</span><span class="p">))</span> <span class="p">{</span>
-        <span class="kt">Text</span><span class="p">(</span><span class="s">"Static row 3"</span><span class="p">)</span>
-        <span class="kt">Text</span><span class="p">(</span><span class="s">"Static row 4"</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">TextField</span><span class="p">(</span><span class="s">"Enter your word"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">newWord</span><span class="p">,</span> <span class="nv">onCommit</span><span class="p">:</span> <span class="n">addNewWord</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h1 id="loading-resources-from-your-app-bundle">Loading resources from your app bundle</h1>
+<p>當在文字框輸入單字時預設第一個字會自動大寫，透過autocapitalization把自動大寫關掉</p>
 
-<p>利用Bundle.main獲取，可以指定檔案名稱（forResource）及副檔名（txt）</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">fileURL</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="s">"some-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// we found the file in our bundle!</span>
-<span class="p">}</span>	
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">autocapitalization</span><span class="p">(</span><span class="o">.</span><span class="k">none</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>需要使用try catch 的方式去存取內容</p>
+<h1 id="running-code-when-our-app-launches">Running code when our app launches</h1>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="k">let</span> <span class="nv">fileContents</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">String</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">fileURL</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// we loaded the file into a string!</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<h2 id="fatalerror">fatalError</h2>
 
-<h1 id="working-with-strings">Working with strings</h1>
+<p>強制讓App自殺</p>
 
-<p>如果我們想要把字串中的空格去掉並分別存進陣列，我們可以這樣做</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">input</span> <span class="o">=</span> <span class="s">"a b c"</span>
-<span class="k">let</span> <span class="nv">letters</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">separatedBy</span><span class="p">:</span> <span class="s">" "</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>同樣地，我們也可以去掉換行符號</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">input</span> <span class="o">=</span> <span class="s">"""
-            a
-            b
-            c
-            """</span>
-<span class="k">let</span> <span class="nv">letters</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="nf">components</span><span class="p">(</span><span class="nv">separatedBy</span><span class="p">:</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>若想要隨機存取陣列中的元素，可以使用randomElement()</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">letter</span> <span class="o">=</span> <span class="n">letters</span><span class="o">.</span><span class="nf">randomElement</span><span class="p">()</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">fatalError</span><span class="p">(</span><span class="s">"Could not load start.txt from bundle."</span><span class="p">)</span>
 </code></pre></div></div>
 
 
