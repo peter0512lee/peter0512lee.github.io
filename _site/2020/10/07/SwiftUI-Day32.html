@@ -26,7 +26,7 @@
 <link href="/assets/JYL.jpg" rel="apple-touch-icon-precomposed" />
 <!-- Android Lolipop Theme Color -->
 <!-- <meta name="theme-color" content="#1464FB"> -->
-<title>SwiftUI Day30</title>
+<title>SwiftUI Day32</title>
 <!-- 百度统计 -->
 
 <!-- 谷歌分析 -->
@@ -96,7 +96,7 @@
 <!-- 引入博文顶部样式 -->
 <!-- 版本一 垃圾 -->
 <!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
-    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day30</span>
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day32</span>
     <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
     <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
     <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
@@ -108,30 +108,30 @@
   <!-- 页面宽度大于800px -->
   <div class="left-area">
     
-      <a href="/2020/10/07/SwiftUI-Day32.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
-      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day32</sapn></span></div>
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">没有上一页咯</sapn></span></div>
     
   </div>
   <div class="post-titlearea">
-    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day30</span>
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day32</span>
     <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
     <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
     <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
   </div>
   <div class="right-area">
     
-      <a href="/2020/09/28/SwiftUI-Day29.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
-      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day29</sapn></span></div>
+      <a href="/2020/09/29/SwiftUI-Day30.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day30</sapn></span></div>
     
   </div>
 
   <!-- 页面宽度小于800px -->
   <div class="post-changearea">
     
-      <a href="/2020/10/07/SwiftUI-Day32.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>SwiftUI Day32</span></a>
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span><br>没有上一篇咯</span></a>
     
     
-      <a href="/2020/09/28/SwiftUI-Day29.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>SwiftUI Day29</span></a>
+      <a href="/2020/09/29/SwiftUI-Day30.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>SwiftUI Day30</span></a>
     
   </div>
 </div>
@@ -148,45 +148,79 @@
   
 
   <!-- 文章内容 -->
-  <h1 id="adding-to-a-list-of-words">Adding to a list of words</h1>
+  <h1 id="animation">Animation</h1>
 
-<h2 id="guard">guard</h2>
+<p>休息了幾天，今天我們來聊聊動畫（Animation）</p>
 
-<p>有點像if else，guard後面接條件，條件不成立跑else裡面，成立跑外面</p>
+<h2 id="function-animation">function animation</h2>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNewWord</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">let</span> <span class="nv">answer</span> <span class="o">=</span> <span class="n">newWord</span><span class="o">.</span><span class="nf">lowercased</span><span class="p">()</span><span class="o">.</span><span class="nf">trimmingCharacters</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">.</span><span class="n">whitespacesAndNewlines</span><span class="p">)</span>
+<p>呼叫動畫function animation，即可以動畫呈現，()傳入動畫笑過，default為預設動畫效果</p>
 
-    <span class="k">guard</span> <span class="n">answer</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span>
-    <span class="p">}</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
+</code></pre></div></div>
 
-    <span class="n">usedWords</span><span class="o">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">newWord</span> <span class="o">=</span> <span class="s">""</span>
+<h2 id="指定不同的動畫效果">指定不同的動畫效果</h2>
+
+<p>除了default，還有許多動畫效果選項，以下是幾種常見的動畫效果介紹</p>
+
+<h3 id="easeout">easeOut</h3>
+<p>動畫的速度一開始快，然後越來越慢</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="n">easeOut</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="easein">easeIn</h3>
+<p>動畫的速度一開始慢，然後越來越快</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="n">easeIn</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="easeinout">easeInOut</h3>
+<p>動畫速度一開始慢，然後愈來愈快，最後再愈來愈慢。.default 的動畫效果跟 easeInOut 類似</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="n">easeInOut</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="linear">linear</h3>
+<p>動畫維持固定速度，加上參數duration指定動畫的時間</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">linear</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="spring">spring</h3>
+<p>類似彈簧的動畫效果 ，它將像彈簧來回振動般變成最後的畫面，參數dampingFraction是震動次數，範圍0~1，數字越小震動次數越多</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">spring</span><span class="p">(</span><span class="nv">dampingFraction</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="repeatcount">repeatCount</h3>
+<p>參數repeatCount控制動畫重複的次數，autoreverses 控制是否會以動畫反轉回原來狀態再繼續下一次的動畫</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">repeatCount</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">autoreverses</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="repeatforever">repeatForever</h3>
+<p>參數repeatForever使動畫永不停止</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">repeatForever</span><span class="p">(</span><span class="nv">autoreverses</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="onappear">onAppear</h3>
+<p>參數onAppear讓畫面出現時，自動開始動畫</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">animationAmount</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h2 id="oncommit">onCommit</h2>
-
-<p>觸發事件，在這我輸入一個單字後call addNewWord() 加入list</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">TextField</span><span class="p">(</span><span class="s">"Enter your word"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">newWord</span><span class="p">,</span> <span class="nv">onCommit</span><span class="p">:</span> <span class="n">addNewWord</span><span class="p">)</span>
+<h3 id="delay">delay</h3>
+<p>Animation 的 delay function，讓動畫幾秒後再開始</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span>
+    <span class="kt">Animation</span><span class="o">.</span><span class="k">default</span>
+        <span class="o">.</span><span class="nf">delay</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">)</span>
 </code></pre></div></div>
 
-<p>當在文字框輸入單字時預設第一個字會自動大寫，透過autocapitalization把自動大寫關掉</p>
+<h3 id="speed">speed</h3>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">autocapitalization</span><span class="p">(</span><span class="o">.</span><span class="k">none</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">以下動畫的時間原本是</span> <span class="mi">1</span> <span class="n">秒</span><span class="err">，</span><span class="nf">speed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">將讓速度加快</span><span class="err">，</span><span class="n">變成</span> <span class="mi">2</span> <span class="n">倍</span><span class="err">，</span><span class="n">因此變成</span> <span class="mf">0.5</span> <span class="n">秒</span>
+<span class="o">.</span><span class="nf">animation</span><span class="p">(</span>
+    <span class="kt">Animation</span><span class="o">.</span><span class="nf">linear</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">speed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
 </code></pre></div></div>
-
-<h1 id="running-code-when-our-app-launches">Running code when our app launches</h1>
-
-<h2 id="fatalerror">fatalError</h2>
-
-<p>強制讓App自殺</p>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">fatalError</span><span class="p">(</span><span class="s">"Could not load start.txt from bundle."</span><span class="p">)</span>
-</code></pre></div></div>
-
 
   <!-- 引入share模块 -->
   
