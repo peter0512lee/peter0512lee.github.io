@@ -108,8 +108,8 @@
   <!-- 页面宽度大于800px -->
   <div class="left-area">
     
-      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
-      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">没有上一页咯</sapn></span></div>
+      <a href="/2020/10/12/SwiftUI-Day33.html" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day33</sapn></span></div>
     
   </div>
   <div class="post-titlearea">
@@ -128,7 +128,7 @@
   <!-- 页面宽度小于800px -->
   <div class="post-changearea">
     
-      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span><br>没有上一篇咯</span></a>
+      <a href="/2020/10/12/SwiftUI-Day33.html" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>上一篇<br><br>SwiftUI Day33</span></a>
     
     
       <a href="/2020/09/29/SwiftUI-Day30.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>SwiftUI Day30</span></a>
@@ -148,7 +148,7 @@
   
 
   <!-- 文章内容 -->
-  <h1 id="animation">Animation</h1>
+  <h1 id="animation---1">Animation - 1</h1>
 
 <p>休息了幾天，今天我們來聊聊動畫（Animation）</p>
 
@@ -214,9 +214,8 @@
 </code></pre></div></div>
 
 <h3 id="speed">speed</h3>
-
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">以下動畫的時間原本是</span> <span class="mi">1</span> <span class="n">秒</span><span class="err">，</span><span class="nf">speed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">將讓速度加快</span><span class="err">，</span><span class="n">變成</span> <span class="mi">2</span> <span class="n">倍</span><span class="err">，</span><span class="n">因此變成</span> <span class="mf">0.5</span> <span class="n">秒</span>
-<span class="o">.</span><span class="nf">animation</span><span class="p">(</span>
+<p>以下動畫的時間原本是 1 秒，speed(2) 將讓速度加快，變成 2 倍，因此變成 0.5 秒</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="nf">animation</span><span class="p">(</span>
     <span class="kt">Animation</span><span class="o">.</span><span class="nf">linear</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
         <span class="o">.</span><span class="nf">speed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="p">)</span>

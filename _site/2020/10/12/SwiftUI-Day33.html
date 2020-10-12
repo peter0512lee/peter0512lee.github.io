@@ -1,0 +1,416 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="JYL" />
+<meta name="keywords" content="JYL, CS, peter0512lee, 彼得" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/JYL.jpg" rel="shortcut icon" />
+<link href="/assets/JYL.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>SwiftUI Day33</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170789023-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170789023-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(255,90,90) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(255,90,90);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">彼得 JYL.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首頁</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">標籤</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">時間軸</a></li>
+              
+                <li><a href="/about.html" style="color: white;">關於我</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首頁</li></a>
+        
+          <a href="/tags.html"><li>標籤</li></a>
+        
+          <a href="/timeline.html"><li>時間軸</li></a>
+        
+          <a href="/about.html"><li>關於我</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day33</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(255,90,90);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(255,90,90)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(255,90,90);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SwiftUI Day33</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2020/10/07/SwiftUI-Day32.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(255,90,90)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(255,90,90);"><sapn class="main">SwiftUI Day32</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2020/10/07/SwiftUI-Day32.html" class="rightchange" style="border-left: 1px solid rgb(255,90,90);border-bottom: 2px solid rgb(255,90,90);"><span>下一篇<br><br>SwiftUI Day32</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(255,90,90); border-right: 8px solid rgb(255,90,90)">
+        Learning SwiftUI
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  <h1 id="animation---2">Animation - 2</h1>
+
+<p>今天是動畫第二篇，講一些比較進階的語法</p>
+
+<h2 id="controlling-the-animation-stack">Controlling the animation stack</h2>
+
+<ol>
+  <li>宣告Bool變數enabled控制按鈕開關，SwiftUI view的型別定義裡，可改變的property要用@State var宣告，少了@State的var是不能改變的</li>
+  <li>Button綁定enabled，按一下變true，按一下變false，透過toggle綁定Button跟enabled</li>
+  <li>如果想要停用動畫，可以將animation()中的參數設成nil</li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+<span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">false</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">Button</span><span class="p">(</span><span class="s">"Tap Me"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">enabled</span><span class="o">.</span><span class="nf">toggle</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="n">enabled</span> <span class="p">?</span> <span class="kt">Color</span><span class="o">.</span><span class="nv">blue</span> <span class="p">:</span> <span class="kt">Color</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">white</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">clipShape</span><span class="p">(</span><span class="kt">RoundedRectangle</span><span class="p">(</span><span class="nv">cornerRadius</span><span class="p">:</span> <span class="n">enabled</span> <span class="p">?</span> <span class="mi">60</span> <span class="p">:</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="o">.</span><span class="nf">interpolatingSpring</span><span class="p">(</span><span class="nv">stiffness</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">damping</span><span class="p">:</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="animating-gestures">Animating gestures</h2>
+
+<ol>
+  <li>利用offset位移，可以傳入x, y各別位移量，也可以直接使用CGSize</li>
+  <li>DragGesture()，有兩個closure，onChanged()：手指開始拖移的期間，onEnded()：手指離開的剎那</li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">letters</span> <span class="o">=</span> <span class="kt">Array</span><span class="p">(</span><span class="s">"Hello SwiftUI"</span><span class="p">)</span>
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">dragAmount</span> <span class="o">=</span> <span class="kt">CGSize</span><span class="o">.</span><span class="n">zero</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">HStack</span><span class="p">(</span><span class="nv">spacing</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">ForEach</span><span class="p">(</span><span class="mi">0</span><span class="o">..&lt;</span><span class="n">letters</span><span class="o">.</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span> <span class="n">num</span> <span class="k">in</span>
+                <span class="kt">Text</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">letters</span><span class="p">[</span><span class="n">num</span><span class="p">]))</span>
+                    <span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">enabled</span> <span class="p">?</span> <span class="kt">Color</span><span class="o">.</span><span class="nv">blue</span> <span class="p">:</span> <span class="kt">Color</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">offset</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">dragAmount</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">animation</span><span class="p">(</span><span class="kt">Animation</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">delay</span><span class="p">(</span><span class="kt">Double</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">gesture</span><span class="p">(</span>
+            <span class="kt">DragGesture</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">onChanged</span> <span class="p">{</span> <span class="k">self</span><span class="o">.</span><span class="n">dragAmount</span> <span class="o">=</span> <span class="nv">$0</span><span class="o">.</span><span class="n">translation</span> <span class="p">}</span>
+                <span class="o">.</span><span class="n">onEnded</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">dragAmount</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">enabled</span><span class="o">.</span><span class="nf">toggle</span><span class="p">()</span>
+                <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="showing-and-hiding-views-with-transitions">Showing and hiding views with transitions</h2>
+
+<ol>
+  <li>呼叫withAnimation時，可以在參數傳入想要的Animation，省略時將採用預設的動畫效果</li>
+  <li>.asymmetric，可以顯示時使用一種transition，消失時使用另一種transition</li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+<span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">isShowingRed</span> <span class="o">=</span> <span class="kc">false</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">"Tap Me"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">withAnimation</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">isShowingRed</span><span class="o">.</span><span class="nf">toggle</span><span class="p">()</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="n">isShowingRed</span> <span class="p">{</span>
+                <span class="kt">Rectangle</span><span class="p">()</span>
+                    <span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">Color</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="nf">asymmetric</span><span class="p">(</span><span class="nv">insertion</span><span class="p">:</span> <span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="nv">removal</span><span class="p">:</span> <span class="o">.</span><span class="n">opacity</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="building-custom-transitions-using-viewmodifier">Building custom transitions using ViewModifier</h2>
+
+<ol>
+  <li>我們可以自訂modifier，body 的參數 content 將是我們想修改的 view，因此我們從 content 呼叫想設定的 modifier</li>
+  <li>透過 extension 讓 custom modifier 更容易呼叫</li>
+</ol>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+<span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">isShowingRed</span> <span class="o">=</span> <span class="kc">false</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">"Tap Me"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">withAnimation</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">isShowingRed</span><span class="o">.</span><span class="nf">toggle</span><span class="p">()</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="n">isShowingRed</span> <span class="p">{</span>
+                <span class="kt">Rectangle</span><span class="p">()</span>
+                    <span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">Color</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+                    <span class="o">.</span><span class="nf">transition</span><span class="p">(</span><span class="o">.</span><span class="n">pivot</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">CornerRotateModifier</span><span class="p">:</span> <span class="kt">ViewModifier</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">amount</span><span class="p">:</span> <span class="kt">Double</span>
+    <span class="k">let</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">UnitPoint</span>
+
+    <span class="kd">func</span> <span class="nf">body</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt">Content</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="n">content</span><span class="o">.</span><span class="nf">rotationEffect</span><span class="p">(</span><span class="o">.</span><span class="nf">degrees</span><span class="p">(</span><span class="n">amount</span><span class="p">),</span> <span class="nv">anchor</span><span class="p">:</span> <span class="n">anchor</span><span class="p">)</span><span class="o">.</span><span class="nf">clipped</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">AnyTransition</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">pivot</span><span class="p">:</span> <span class="kt">AnyTransition</span> <span class="p">{</span>
+        <span class="o">.</span><span class="nf">modifier</span><span class="p">(</span>
+            <span class="nv">active</span><span class="p">:</span> <span class="kt">CornerRotateModifier</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="nv">anchor</span><span class="p">:</span> <span class="o">.</span><span class="n">topLeading</span><span class="p">),</span>
+            <span class="nv">identity</span><span class="p">:</span> <span class="kt">CornerRotateModifier</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">anchor</span><span class="p">:</span> <span class="o">.</span><span class="n">topLeading</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+    <section class="post-footer-item comment">
+      <div id="disqus_thread"></div>
+    </section>
+
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script');
+        /*写入自己的disqus信息*/
+        s.src = 'https://peter0512lee.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+
+    </script>
+
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有disqus评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>彼得 JYL. ©
+  
+  
+  2020
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
