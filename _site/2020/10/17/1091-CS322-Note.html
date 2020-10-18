@@ -1,0 +1,389 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="JYL" />
+<meta name="keywords" content="JYL, CS, peter0512lee, 彼得" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/JYL.jpg" rel="shortcut icon" />
+<link href="/assets/JYL.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>1091 CS322 微型應用程式設計實務 Note</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170789023-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170789023-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(0,191,255) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(0,191,255);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">彼得 JYL.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首頁</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">標籤</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">時間軸</a></li>
+              
+                <li><a href="/about.html" style="color: white;">關於我</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首頁</li></a>
+        
+          <a href="/tags.html"><li>標籤</li></a>
+        
+          <a href="/timeline.html"><li>時間軸</li></a>
+        
+          <a href="/about.html"><li>關於我</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">1091 CS322 微型應用程式設計實務 Note</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(0,191,255);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(0,191,255)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(0,191,255);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">1091 CS322 微型應用程式設計實務 Note</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2020/10/12/SwiftUI-Day33.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(0,191,255)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(0,191,255);"><sapn class="main">SwiftUI Day33</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(0,191,255);border-bottom: 2px solid rgb(0,191,255);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2020/10/12/SwiftUI-Day33.html" class="rightchange" style="border-left: 1px solid rgb(0,191,255);border-bottom: 2px solid rgb(0,191,255);"><span>下一篇<br><br>SwiftUI Day33</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(0,191,255); border-right: 8px solid rgb(0,191,255)">
+        Day1 - Swift 語法1
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  <h1 id="introduction">Introduction</h1>
+<p>這學期修了微型應用程式設計實務，剛好在教Swift，所以打算開一個系列文章記錄Swift筆記</p>
+
+<h2 id="print">print</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="kt">Hello</span><span class="p">,</span> <span class="kt">World</span><span class="p">)</span> <span class="c1">// 這個應該不用說明了吧XD</span>
+</code></pre></div></div>
+
+<h2 id="variable-and-constant">Variable and Constant</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">Con1</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">// let: 宣告常數 </span>
+<span class="k">var</span> <span class="nv">Var</span> <span class="o">=</span> <span class="mi">200</span> <span class="c1">// var: 宣告變數 </span>
+<span class="c1">// 宣告為常數，指定資料型態，給值</span>
+<span class="k">let</span> <span class="nv">Con2</span><span class="p">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1">// 直接給值，依據值決定資料型態</span>
+<span class="k">let</span> <span class="nv">Con3</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="c1">// 只宣告，不給值，不給資料型態：Wrong</span>
+<span class="k">let</span> <span class="nv">Con4</span>
+</code></pre></div></div>
+
+<h2 id="string-interpolation">String interpolation</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sum</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"The sum of 10 and 20 is </span><span class="se">\(</span><span class="n">sum</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="c1">// The sum of 10 and 20 is 30</span>
+</code></pre></div></div>
+
+<h2 id="字串相加">字串相加</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">characteristic</span> <span class="o">=</span> <span class="s">"handsome"</span>
+<span class="k">let</span> <span class="nv">myName</span> <span class="o">=</span> <span class="s">"Peter"</span>
+<span class="k">var</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">myName</span> <span class="o">+</span> <span class="s">" is "</span> <span class="o">+</span> <span class="n">characteristic</span>
+<span class="c1">// Peter is handsome</span>
+</code></pre></div></div>
+
+<h2 id="dictionary">Dictionary</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">newDict</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"Ryan"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> 
+    <span class="s">"John"</span><span class="p">:</span><span class="mi">20</span>
+<span class="p">]</span>
+
+<span class="c1">// 建立一個空的dictionary</span>
+<span class="k">var</span> <span class="nv">emptyDict</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Float</span><span class="p">]()</span> <span class="c1">// key型態：value型態</span>
+</code></pre></div></div>
+
+<h2 id="array">Array</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">newArray</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Peter"</span><span class="p">,</span> <span class="s">"Bella"</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">newArray</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1">// Peter</span>
+
+<span class="c1">// 建立一個空的array</span>
+<span class="k">var</span> <span class="nv">emptyArray</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">]()</span> <span class="c1">// 陣列的資料型態</span>
+
+<span class="c1">// 陣列排序</span>
+<span class="k">var</span> <span class="nv">numArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="k">var</span> <span class="nv">sortedArray</span> <span class="o">=</span> <span class="n">numArray</span><span class="o">.</span><span class="nf">sorted</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">sortedArray</span><span class="p">)</span>
+<span class="c1">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+
+<span class="c1">// 大量調整Array</span>
+<span class="k">var</span> <span class="nv">numberArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="k">let</span> <span class="nv">numberArrayTen</span> <span class="o">=</span> <span class="n">numberArray</span><span class="o">.</span><span class="nf">map</span><span class="p">({</span><span class="nv">$0</span> <span class="o">+</span> <span class="mi">10</span><span class="p">})</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">numberArrayTen</span><span class="p">)</span>
+<span class="c1">// [11, 13, 15, 17, 19, 12, 14, 16, 18]</span>
+</code></pre></div></div>
+
+<h2 id="optional-variable">Optional Variable</h2>
+<p>宣告的變數(常數)，不管型別是什麼，都可以幫它添加 optional 的特性，使其成為一個可以有值，也可以無值的特別變數(常數)。</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">girlFriend</span><span class="p">:</span><span class="kt">String</span><span class="p">?</span>
+</code></pre></div></div>
+<p>optional 變數(常數)儲存的內容是被包裝起來的，我們需要解開包裝，才能讀取它的內容。
+使用!即可解開包裝</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">girl</span><span class="p">:</span><span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">"Bella"</span>
+<span class="n">girl</span> <span class="o">=</span> <span class="s">"可愛的"</span> <span class="o">+</span> <span class="n">girl</span><span class="o">!</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">girl</span><span class="o">!</span><span class="p">)</span>
+<span class="c1">// 可愛的Bella</span>
+</code></pre></div></div>
+
+<h2 id="switch">Switch</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Apple"</span><span class="p">,</span> <span class="s">"Banana"</span><span class="p">,</span> <span class="s">"Orange"</span><span class="p">]</span>
+<span class="k">switch</span> <span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">{</span>
+    <span class="k">case</span> <span class="s">"Apple"</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Apple"</span><span class="p">)</span>
+    <span class="k">case</span> <span class="s">"Banana"</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Banana"</span><span class="p">)</span>
+    <span class="k">default</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Fruits"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// Apple</span>
+</code></pre></div></div>
+
+<h2 id="for-in-loops">For-in Loops</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Anna"</span><span class="p">,</span> <span class="s">"Alex"</span><span class="p">,</span> <span class="s">"Brian"</span><span class="p">,</span> <span class="s">"Jack"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span> <span class="k">in</span> <span class="n">names</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Hello, </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// Hello, Anna!</span>
+<span class="c1">// Hello, Alex!</span>
+<span class="c1">// Hello, Brian!</span>
+<span class="c1">// Hello, Jack!</span>
+
+<span class="k">for</span> <span class="n">index</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="mi">5</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">index</span><span class="se">)</span><span class="s"> times 5 is </span><span class="se">\(</span><span class="n">index</span> <span class="o">*</span> <span class="mi">5</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 1 times 5 is 5</span>
+<span class="c1">// 2 times 5 is 10</span>
+<span class="c1">// 3 times 5 is 15</span>
+<span class="c1">// 4 times 5 is 20</span>
+<span class="c1">// 5 times 5 is 25</span>
+</code></pre></div></div>
+
+<h2 id="while-loops">While Loops</h2>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="n">condition</span> <span class="p">{</span>
+    <span class="n">statements</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+    <section class="post-footer-item comment">
+      <div id="disqus_thread"></div>
+    </section>
+
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script');
+        /*写入自己的disqus信息*/
+        s.src = 'https://peter0512lee.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+
+    </script>
+
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有disqus评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>彼得 JYL. ©
+  
+  
+  2020
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
