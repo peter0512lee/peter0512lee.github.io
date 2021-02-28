@@ -1,0 +1,493 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="JYL" />
+<meta name="keywords" content="JYL, CS, peter0512lee, 彼得" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_default.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="//at.alicdn.com/t/font_856428_y9z6nq7zf5.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet"> -->
+
+<!-- Favicon -->
+<link href="/assets/JYL.jpg" rel="shortcut icon" />
+<link href="/assets/JYL.jpg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>110 資工所推甄心得</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170789023-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170789023-1');
+</script>
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" rgb(191,0,255) ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:rgb(191,0,255);">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;">彼得 JYL.</a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+                <li><a href="/" style="color: white;">首頁</a></li>
+              
+                <li><a href="/tags.html" style="color: white;">標籤</a></li>
+              
+                <li><a href="/timeline.html" style="color: white;">時間軸</a></li>
+              
+                <li><a href="/about.html" style="color: white;">關於我</a></li>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+          <a href="/"><li>首頁</li></a>
+        
+          <a href="/tags.html"><li>標籤</li></a>
+        
+          <a href="/timeline.html"><li>時間軸</li></a>
+        
+          <a href="/about.html"><li>關於我</li></a>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">110 資工所推甄心得</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:rgb(191,0,255);">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='rgb(191,0,255)';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:rgb(191,0,255);"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">110 資工所推甄心得</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;true</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/2020/10/24/1091-CS322-Note-Day2.html" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='rgb(191,0,255)';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:rgb(191,0,255);"><sapn class="main">1091 CS322 微型應用程式設計實務 Note Day2</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid rgb(191,0,255);border-bottom: 2px solid rgb(191,0,255);"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/2020/10/24/1091-CS322-Note-Day2.html" class="rightchange" style="border-left: 1px solid rgb(191,0,255);border-bottom: 2px solid rgb(191,0,255);"><span>下一篇<br><br>1091 CS322 微型應用程式設計實務 Note Day2</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+    
+      <div class="postpage-subtitle" style="border-left: 8px solid rgb(191,0,255); border-right: 8px solid rgb(191,0,255)">
+        研究所
+      </div>
+    
+  
+
+  <!-- 文章内容 -->
+  <h1 id="110-資工所推甄心得">110 資工所推甄心得</h1>
+
+<p>HackMD好讀版：<a href="https://hackmd.io/@peter0512lee/graduateReview">110 資工所推甄心得 by HackMD</a></p>
+
+<h2 id="前言">前言</h2>
+
+<p>非常感謝研所版，在版上獲得很多資訊，如今也輪到我回饋版上了
+自己的校名不突出，希望可以給校名不突出的同學一點信心
+今年疫情真的有比較難推，每所都比去年多一百到兩百人</p>
+
+<h2 id="背景">背景</h2>
+
+<h4 id="私立元智大學資訊工程學系">私立元智大學資訊工程學系</h4>
+
+<ul>
+  <li>累積班排名:1 / 44 (2%)</li>
+  <li>累積系排名:4 / 136 (3%)</li>
+  <li>三年皆得書卷獎</li>
+</ul>
+
+<h4 id="上海交通大學">上海交通大學</h4>
+
+<ul>
+  <li>夏季學期學生</li>
+</ul>
+
+<h4 id="研究經歷">研究經歷</h4>
+
+<ul>
+  <li>科技部大專生研究計畫： -生醫影像深度學習專題</li>
+  <li>產學合作案 -醫療保險分析</li>
+  <li>國際會議論文 -醫學領域的小研究，發一篇國際會議論文並發表</li>
+</ul>
+
+<h4 id="競賽經歷">競賽經歷</h4>
+
+<ul>
+  <li>2020 NCPU 銅獎</li>
+  <li>2019 ICPC(Taipei-Hsinchu) Honorable mention</li>
+  <li>新思科技 ARC AIoT 智慧物聯網冬令營暨迷你黑客松大賽</li>
+  <li>2019 中華電信 AIoT 黑客松大賽 決賽</li>
+</ul>
+
+<h2 id="推甄結果">推甄結果</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>報考系所</th>
+      <th>結果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>台大資工</td>
+      <td>落榜</td>
+    </tr>
+    <tr>
+      <td>台大網媒</td>
+      <td>落榜</td>
+    </tr>
+    <tr>
+      <td>台大人工智慧</td>
+      <td>落榜</td>
+    </tr>
+    <tr>
+      <td>台大電機丙</td>
+      <td>落榜</td>
+    </tr>
+    <tr>
+      <td>台大電機資安</td>
+      <td>落榜</td>
+    </tr>
+    <tr>
+      <td>台大工科丁</td>
+      <td>備 9 （沒備上）</td>
+    </tr>
+    <tr>
+      <td>清大資工</td>
+      <td>落榜</td>
+    </tr>
+    <tr>
+      <td>清大資應</td>
+      <td>備 2 （備上確定就讀）</td>
+    </tr>
+    <tr>
+      <td>交大資聯</td>
+      <td>三個都備一百多</td>
+    </tr>
+    <tr>
+      <td>交大數據</td>
+      <td>備 18 （備上放棄）</td>
+    </tr>
+    <tr>
+      <td>成大資工</td>
+      <td>備 6 （備上放棄）</td>
+    </tr>
+    <tr>
+      <td>政大資科</td>
+      <td>逕取</td>
+    </tr>
+    <tr>
+      <td>台科資工</td>
+      <td>逕取</td>
+    </tr>
+    <tr>
+      <td>中央資工</td>
+      <td>逕取</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="準備時程">準備時程</h2>
+
+<h4 id="大二下至大三上">大二下至大三上：</h4>
+
+<p>原本是打算拼考試，因此當時就先報了補習班，那個時候每兩天就會跑一次補習班上課，陸續上了線代、離散、資結。</p>
+
+<h4 id="大三下">大三下：</h4>
+
+<p>開始做專題跟產學合作還有參加比賽，所以就沒時間去上課，如果可以的話專題至少要有成果，不然備審會蠻難寫的。</p>
+
+<h4 id="暑假至大四上">暑假至大四上：</h4>
+
+<p>後來成績單出來發現成績還可以就果斷轉換跑道改用推甄，暑假我就開始有先弄備審了，這樣比較有充足的時間準備，也寫得比較仔細。</p>
+
+<h2 id="備審">備審</h2>
+
+<p>從七月開始準備備審，跟很多學長姐借了他們當初寫的備審，越看越花 XD
+但是真的很有幫助，如果各位也要推甄建議可以<strong>跟自己學校的學長姐詢問一下，會比較有方向。</strong>
+我覺得備審最重要的是<strong>最前面一兩頁要有簡歷</strong>，像我是放兩頁，模板我是參考國外的那種條列式模板（當時我參考的一位學姊也是這樣做）。
+再來就是內容不要講廢話，一開始就點出你是怎樣的人，你有什麼優勢，你跟別人不一樣的地方，很多人都會從家庭背景開始寫，我自己是不喜歡這樣。</p>
+
+<h2 id="各校心得">各校心得</h2>
+
+<p>這邊先說一下，我會報那麼多系所是因為我不想留下遺憾，然後我想說資料都差不多就能推就推了，沒省錢。</p>
+
+<h3 id="台大">台大</h3>
+
+<p>沒什麼心得，只有工科丁有備取，其他都不錄取，去年我們學校學姊有台大正取。</p>
+
+<h3 id="清大">清大</h3>
+
+<p>清大比較特別的是需要用英文寫讀書計畫，資工一頁，資應三頁，資工不用面試，資應要面試</p>
+
+<h4 id="資應面試">資應面試</h4>
+
+<p>今年是五分鐘 QA，不用準備自我介紹，一間三個教授
+被問到的題目：</p>
+
+<ol>
+  <li>你有同時報名資工跟資應，如果兩邊都錄取你會選擇哪一所？</li>
+  <li>報名動機是什麼？</li>
+  <li>被問很多關於專題的問題（有一位教授剛好是做跟我有關的領域的）</li>
+</ol>
+
+<p>整體氣氛很輕鬆，老師人都很好，很重視你的報考動機</p>
+
+<h3 id="交大">交大</h3>
+
+<p>都不用面試
+數據相較資聯比較好推
+報名資料相較其他學校比較難準備，他會拆成一塊一塊讓你填，所以沒辦法像其他學校直接 PDF 上傳結束。
+個人覺得沒有比想像中吃校名</p>
+
+<h3 id="成大">成大</h3>
+
+<p>50%書審 50%面試</p>
+
+<h4 id="面試">面試</h4>
+
+<p>一間三個教授，進去先四分鐘自我介紹，三分鐘ＱＡ
+被問到的問題：</p>
+
+<ol>
+  <li>你怎麼沒報人工智慧組？</li>
+  <li>你參加很多競賽，你在競賽中擔任什麼樣的角色？</li>
+  <li>你的專題有跟 AI 中心合作？</li>
+</ol>
+
+<p>我覺得沒什麼專業問題，也是蠻像聊天的，但我同學其他間有被電蠻慘，所以蠻看運氣你遇到怎麼樣的教授</p>
+
+<h3 id="政大">政大</h3>
+
+<p>沒想過會逕行錄取，感謝政大給我這麼高的分數</p>
+
+<h3 id="台科">台科</h3>
+
+<p>沒想過會逕行錄取，就我所知往年我們學校的人都還是要面試，原本提早準備好面試的東西結果得知逕取後就把我準備的東西分享給同學了 XD</p>
+
+<h3 id="中央">中央</h3>
+
+<p>沒想過會逕行錄取，這次好像幾乎只看成績，我們學校系排前五名都逕行錄取。</p>
+
+<h2 id="準備心得">準備心得</h2>
+
+<p>成績很重要，如果你今天校名不夠好，更要顧好成績，以我們學校為例，前十名才比較有機會推上四大。
+經歷的部分，我覺得有沒有<strong>發過論文最重要</strong>，如果有機會的話一定要發一篇，個人覺得很加分，再來是科技部計畫，記得投稿，比賽的部分我覺得可以多參加，讓你的經歷豐富一點，而不是只有專題而已。</p>
+
+<h2 id="總結">總結</h2>
+
+<p>我沒想過我可以推上四大，當初以為頂多就中央台科而已，現在回頭看似乎是悲觀了點，
+成績一定要好好顧，成績好才有機會被看見，再來是專題好好做，有機會發論文更好。</p>
+
+<h2 id="致謝">致謝</h2>
+
+<p>感謝專題老師大三狂叫我參加比賽然後叫我發論文，不然應該會走上考試之路<br />
+感謝身旁的同學一起討論備審一起去面試<br />
+感謝學長姐與老師們幫我看備審，修備審<br />
+感謝 ptt 研所版上曾經回答過我問題與幫助過我的各位，小弟我感激不盡<br />
+特別感謝前女友的家人瞧不起我，讓我更有動力讓自己變得更好。</p>
+
+<p>有任何問題都可以站內信我！</p>
+
+<p>祝福大家推甄，考試，研究都順利！</p>
+
+  <!-- 引入share模块 -->
+  
+  <div class="social-share-wrapper">
+    <div class="social-share"></div>
+  </div>
+
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+        'qq'
+        ,
+        
+      
+        'wechat'
+        ,
+        
+      
+        'weibo'
+        ,
+        
+      
+        'twitter'
+        ,
+        
+      
+        'facebook'
+        
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+    <section class="post-footer-item comment">
+      <div id="disqus_thread"></div>
+    </section>
+
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script');
+        /*写入自己的disqus信息*/
+        s.src = 'https://peter0512lee.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+
+    </script>
+
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有disqus评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>彼得 JYL. ©
+  
+  
+    2020
+    -
+  
+  2021
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
